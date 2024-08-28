@@ -3,7 +3,7 @@
     "id": 1,
     "descricao": "Produto 1",
     "status": "true",
-    "imagem": "/assets/img/monitor.webp",
+    "imagem": "../assets/img/monitor.webp",
     "quantidade": 100,
     "preco": 10.0
   },
@@ -13,7 +13,7 @@
     "id": 2,
     "descricao": "Produto 2",
     "status": "true",
-    "imagem": "/assets/img/garrafa-termica.jpg",
+    "imagem": "../assets/img/teclado.jpg",
     "quantidade": 100,
     "preco": 20.0
   },
@@ -21,7 +21,7 @@
     "id": 3,
     "descricao": "Produto 3",
     "status": "false",
-    "imagem": "/assets/img/celular.jpg",
+    "imagem": "../assets/img/celular.jpg",
     "quantidade": 100,
     "preco": 30.0
   }

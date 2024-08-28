@@ -1,31 +1,25 @@
-// Declaração da variável produtos fora do escopo do evento para torná-la global
-let produtos;
-
-window.onload = function () {
-  var storedUser = localStorage.getItem("usuario");
-  var user = JSON.parse(storedUser);
-  document.getElementById("user").textContent = user.name;
-  document.getElementById("perfil").textContent = user.name;
-  document.getElementById("idPerfil").textContent = user.id;
-};
-
 document.addEventListener("DOMContentLoaded", function () {
   fetch("/Dados/loja.json") //ele pega o json
     .then((response) => response.json()) // ele le o aquivo e escreve no json
     .then((data) => { // ele atribiu a data
+      console.log(data);
       produtos = data;
       const produtosContainer =
-        document.getElementsByTagName("produtos-container");
+        document.getElementById("produtos-container");
 
-      produtos.map((produto, index) => {  // criando html em js
+      produtos.forEach((produto, index) => {  // criando html em js
         const card = document.createElement("div");
         card.className = "card";
-        card.style.width = "18rem";
+        card.style.width = "100px";
         card.style.marginRight = "10px";
+        card.style.objectFit = 'cover'
+        
 
         const imagem = document.createElement("img");
         imagem.src = produto.imagem;
         imagem.className = "card-img-top";
+        imagem.style.width = '90%'
+       
 
         const cardBody = document.createElement("div");
         cardBody.className = "card-body";

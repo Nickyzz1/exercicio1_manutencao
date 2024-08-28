@@ -4,3 +4,30 @@
     font-weight: 100;
     font-style: normal;
 }
+header{
+    padding: 4%;
+    background-color: rgb(51, 49, 49) !important;
+    width: 100%;
+}
+
+body
+{
+    background-color: antiquewhite !important;
+}
+
+main{
+    text-align: center;
+}
+
+#produtos-container{
+   display: flex;
+   justify-content: center;
+}
+
+.card
+{
+   background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+    width: 20% !important;
+}
