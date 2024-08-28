@@ -31,3 +31,11 @@ main{
     border-radius: 10px;
     width: 20% !important;
 }
+
+.disponivel
+{
+    background-color: blue;
+    padding: 10px;
+    width: 10px;
+    border-radius: 100%;
+}

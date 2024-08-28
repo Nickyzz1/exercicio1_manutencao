@@ -19,7 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
         imagem.src = produto.imagem;
         imagem.className = "card-img-top";
         imagem.style.width = '90%'
-       
+
+        const disponivel = document.createElement("div");
+        disponivel.className = "disponivel";
+        if(produto.status == 'true')
+        {
+           disponivel.style.backgroundColor = "green"
+        }
+        else{
+
+          disponivel.style.backgroundColor = "red"
+        }
 
         const cardBody = document.createElement("div");
         cardBody.className = "card-body";
@@ -43,12 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
         cardBody.appendChild(cardText);
         cardBody.appendChild(btnAdicionarAoCarrinho);
 
+        card.appendChild(disponivel);
         card.appendChild(imagem);
         card.appendChild(cardBody);
+        
 
         produtosContainer.appendChild(card);
       });
     })
+
     .catch((error) => console.error("Erro ao carregar o arquivo JSON", error)); // como se fosse um else
 
   $("#produtos-container").on(
