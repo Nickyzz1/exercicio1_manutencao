@@ -10,14 +10,14 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("../Dados/loja.json")
-    .then((response) => response.json())
-    .then((data) => {
+  fetch("../Dados/loja.json") //ele pega o json
+    .then((response) => response.json()) // ele le o aquivo e escreve no json
+    .then((data) => { // ele atribiu a data
       produtos = data;
       const produtosContainer =
         document.getElementsByTagName("produtos-container");
 
-      produtos.map((produto, index) => {
+      produtos.map((produto, index) => {  // criando html em js
         const card = document.createElement("div");
         card.className = "card";
         card.style.width = "18rem";
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnAdicionarAoCarrinho.textContent = "Adicionar ao Carrinho";
         btnAdicionarAoCarrinho.setAttribute("data-indice", index);
 
-        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardTitle); // criar uma coisa dentro de outra
         cardBody.appendChild(cardText);
         cardBody.appendChild(btnAdicionarAoCarrinho);
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         produtosContainer.appendChild(card);
       });
     })
-    .catch((error) => console.error("Erro ao carregar o arquivo JSON", error));
+    .catch((error) => console.error("Erro ao carregar o arquivo JSON", error)); // como se fosse um else
 
   $("#produtos-container").on(
     "click",
