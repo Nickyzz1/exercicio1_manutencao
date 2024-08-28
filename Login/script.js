@@ -13,6 +13,7 @@ function login() {
 
     window.location.href = "../Loja/loja.html";
   } else {
+      alert("Ceedenciais incorretas");
     //logica para se o nome e senha forem incorretos
   }
 }
