@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => { // ele atribiu a data
       produtos = data;
       const produtosContainer =
-        document.getElementsByTagName("produtos-container");
+      document.getElementById("produtos-container");
 
-      produtos.map((produto, index) => {  // criando html em js
+      produtos.forEach((produto, index) => {  // criando html em js
         const card = document.createElement("div");
         card.className = "card";
         card.style.width = "18rem";
