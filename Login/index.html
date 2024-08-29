@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   </head>
   <body>
+
+    <header>
+      <nav>
+        
+      </nav>
+    </header>
+
+
     <div class="container">
       <h1>Login</h1>
         <input type="text" placeholder="Insira seu nome" id="nome" />
@@ -15,9 +23,14 @@
           <input type="password" placeholder="Insira sua senha" id="senha" >
         </div>
         <button onclick="login()">Entrar</button>
+        <div id="alerta">
+          <div class="content">
+            <p>Login ou senha incorretos!</p>
+            <button onclick="exit()">Fechar</button>
+          </div>
+        </div>
+        <p><a href="../Showroom/showroom.html">Visitar showroom</a></p>
       </div>
-
-      <p><a href="../Showroom/showroom.html">Visitar showroom</a></p>
     </div>
     <script src="script.js"></script>
   </body>

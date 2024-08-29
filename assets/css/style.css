@@ -23,6 +23,14 @@ main{
    display: flex;
    justify-content: center;
 }
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5%;
+}
 
 .card
 {
@@ -41,9 +49,35 @@ main{
     border-radius: 100%;
 }
 
-.incorreto
+.content
 {
-    background-color: red !important;
-    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+#alerta
+{
+    background-color: rgb(200, 54, 54) !important;
+    width: 200px;
+    padding: 3%;
+    border-radius: 10px;
+    color: white;
+    display: none;
+}
+
+
+button
+{
+    margin: 5%;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.3ms;
+}
+button:hover
+{
+    background-color: brown;
+    color: white;
 }

@@ -1,3 +1,5 @@
+var el = document.getElementById('alerta');
+
 function login() {
   var nome = $("#nome").val();
   var senha = $("#senha").val();
@@ -13,7 +15,12 @@ function login() {
 
     window.location.href = "../Loja/loja.html";
   } else {
-      alert("Ceedenciais incorretas");
-    //logica para se o nome e senha forem incorretos
+      renderThats(el);
+  }
+}
+
+function renderThats(el) {
+  if (el.style.display === "none" || el.style.display === "") {
+    el.style.display = "block";
   }
 }
