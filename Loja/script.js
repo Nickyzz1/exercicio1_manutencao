@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cardText.className = "card-text";
         cardText.textContent = "Preço: $" + produto.preco.toFixed(2);
 
-        // const botao = document.createElement("div");
-        // botao.style.margin = '15px'
+        const botao = document.createElement("div");
+        botao.style.margin = '15px'
 
         const btnAdicionarAoCarrinho = document.createElement("a");
         btnAdicionarAoCarrinho.href = "#";
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cardBody.appendChild(cardTitle); // criar uma coisa dentro de outra
         cardBody.appendChild(cardText);
 
-        // botao.appendChild(btnAdicionarAoCarrinho);
-        cardBody.appendChild(btnAdicionarAoCarrinho);
+        botao.appendChild(btnAdicionarAoCarrinho);
+        cardBody.appendChild(botao);
 
         card.appendChild(imagem);
         card.appendChild(cardBody);
@@ -73,3 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 });
+
+const info = document.getElementById('infoUserModal');
+
+function exit() {
+  info.style.display = "none";
+}
+
+function viewInfo() {
+  if (info.style.display === "none" || info.style.display === "") {
+    info.style.display = "block";
+    card.style.hover = 'transform: scale(1); !important'
+  }
+}

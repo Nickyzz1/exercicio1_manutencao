@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
     <style>
@@ -15,10 +16,14 @@
         width: 100vw;
         height: auto;
         overflow-x: hidden;
-        padding: 20px;
         background-color: antiquewhite;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
+      main{
+        text-align: center;
+        margin: 3%;
+      }
+
       .wrap {
         display: flex !important;
         flex-wrap: wrap !important; 
@@ -41,12 +46,23 @@
         width: 200px; /* Define a largura dos cards */
         box-sizing: border-box; /* Inclui padding e borda na largura total */
       }
+      .card:hover{
+        transform: scale(1.07);
+      }
+
+      #produtos-container
+      {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .idPerfil {
         display: flex;
         flex-direction: row;
         gap: 5px;
       }
-      a {
+      button {
+        border: none;
         background-color: blue;
         margin: 3px;
         padding: 7px;
@@ -54,8 +70,65 @@
         color: white;
         text-decoration: none;
       }
-      .botao:hover {
+      .btn-adicionar-ao-carrinho:hover {
         background-color: rgb(6, 6, 61);
+      }
+      button:hover {
+        background-color: rgb(6, 6, 61);
+      }
+
+      header{
+        text-align: center;
+      }
+      #informacoesPerfil
+      {
+        max-width: 300px;
+        background-color: white;
+        color: black;
+        padding: 3%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+        box-shadow: 0 0 3px rgb(226, 170, 97);
+        padding: 120px;
+      }
+      #informacoesPerfil button{
+        display: flex;
+      }
+      nav{
+        background-color: rgb(83, 63, 63) !important;
+        padding: 3%;
+        color: white;
+        display: flex;
+        justify-content: left;
+        box-shadow: 0 0 9px rgb(226, 170, 97);
+        width: 100%;
+        gap: 2rem;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      a:hover{
+        color: gray;
+      }
+
+      ul{
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      #infoUserModal
+      {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        display: none;
+        z-index: 20;
       }
 
       @media (max-width: 900px) {
@@ -66,24 +139,49 @@
     </style>
   </head>
   <body>
-    <a href="../Carrinho/carrinho.html">Ir para carrinho</a>
-    <div>
-      <h5 id="perfil"></h5>
-      <div class="idPerfil">
-        Protocolo atual:
-        <p id="idPerfil"></p>
+
+    <section id="infoUserModal">
+      <div id="informacoesPerfil" >
+        <button type="submit" onclick="exit()" >X</button>
+        <h2 id="perfil"></h2>
+        <div class="idPerfil">
+          Protocolo atual:
+          <p id="idPerfil"></p>
+        </div>
       </div>
-    </div>
-    <h1>Loja</h1>
-    <p>Bem-vindo <span id="user"></span>, vamos às compras!</p>
-    <br />
-    <h2>Produtos</h2>
-    <br />
-    <div class="wrap">
-      <div id="produtos-container" class="">
-        <!-- Cards dos produtos serão inseridos aqui -->
+    </section>
+
+    <header>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="../Carrinho/carrinho.html">Ir para carrinho</a>
+          </li>
+          <li onclick="viewInfo()"><a href="#" id="verPerfil">Ver perfil</a></li>
+          
+        </ul>
+      </nav>
+      <h1>Loja</h1>
+      <p>Bem-vindo <span id="user"></span>, vamos às compras!</p>
+    </header>
+
+
+
+    <main>
+
+      <br />
+      <h2>Produtos</h2>
+      <br />
+      <div class="wrap">
+        <div id="produtos-container" class="">
+          <!-- Cards dos produtos serão inseridos aqui -->
+        </div>
       </div>
-    </div>
+    </main>
+
     <script src="script.js"></script>
+
+
   </body>
 </html>
