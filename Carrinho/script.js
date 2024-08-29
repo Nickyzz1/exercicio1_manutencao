@@ -93,3 +93,11 @@ function gerarDocumentoWord() {
   link.click();
   document.getElementById("pedido").style.display = "block";
 }
+
+const el = document.getElementById("pedido");
+
+function exit() {
+
+  el.style.display = "none";
+
+}
