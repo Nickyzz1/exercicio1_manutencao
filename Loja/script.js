@@ -38,21 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
         cardText.className = "card-text";
         cardText.textContent = "Preço: $" + produto.preco.toFixed(2);
 
-        const botao = document.createElement("div");
-        botao.style.margin = '15px'
+        // const botao = document.createElement("div");
+        // botao.style.margin = '15px'
 
         const btnAdicionarAoCarrinho = document.createElement("a");
         btnAdicionarAoCarrinho.href = "#";
-        btnAdicionarAoCarrinho.className =
-          "btn btn-primary btn-adicionar-ao-carrinho";
+        btnAdicionarAoCarrinho.className = "btn-adicionar-ao-carrinho";
         btnAdicionarAoCarrinho.textContent = "Adicionar ao Carrinho";
         btnAdicionarAoCarrinho.setAttribute("data-indice", index);
 
         cardBody.appendChild(cardTitle); // criar uma coisa dentro de outra
         cardBody.appendChild(cardText);
 
-        botao.appendChild(btnAdicionarAoCarrinho);
-        cardBody.appendChild(botao);
+        // botao.appendChild(btnAdicionarAoCarrinho);
+        cardBody.appendChild(btnAdicionarAoCarrinho);
 
         card.appendChild(imagem);
         card.appendChild(cardBody);
@@ -65,12 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "click",
     ".btn-adicionar-ao-carrinho",
     function () {
-      alert("Você adicionou um produto no carrinho")
       const indexDoProduto = $(this).data("indice");
       const produtoSelecionado = produtos[indexDoProduto];
       let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
       carrinho.push(produtoSelecionado);
       localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      alert("Você adicionou um produto no carrinho")
     }
   );
 });
