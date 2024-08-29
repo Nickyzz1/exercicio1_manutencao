@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     })
     .catch((error) => console.error("Erro ao carregar o arquivo JSON", error)); // como se fosse um else
-
   $("#produtos-container").on(
     "click",
     ".btn-adicionar-ao-carrinho",
