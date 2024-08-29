@@ -19,6 +19,12 @@ function login() {
   }
 }
 
+function exit() {
+
+  el.style.display = "none";
+
+}
+
 function renderThats(el) {
   if (el.style.display === "none" || el.style.display === "") {
     el.style.display = "block";
