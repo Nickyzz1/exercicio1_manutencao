@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
         cardText.className = "card-text";
         cardText.textContent = "Preço: $" + produto.preco.toFixed(2);
 
+        const botao = document.createElement("div");
+        botao.style.margin = '15px'
+
         const btnAdicionarAoCarrinho = document.createElement("a");
         btnAdicionarAoCarrinho.href = "#";
         btnAdicionarAoCarrinho.className =
@@ -47,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cardBody.appendChild(cardTitle); // criar uma coisa dentro de outra
         cardBody.appendChild(cardText);
-        cardBody.appendChild(btnAdicionarAoCarrinho);
+
+        botao.appendChild(btnAdicionarAoCarrinho);
+        cardBody.appendChild(botao);
 
         card.appendChild(imagem);
         card.appendChild(cardBody);
