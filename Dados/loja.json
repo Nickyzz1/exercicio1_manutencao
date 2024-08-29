@@ -34,7 +34,7 @@
     "preco": 30.0
   },
   {
-    "id": 3,
+    "id": 5,
     "descricao": "Produto 5",
     "status": "true",
     "imagem": "../assets/img/ram.webp",
@@ -42,7 +42,7 @@
     "preco": 30.0
   },
   {
-    "id": 3,
+    "id": 6,
     "descricao": "Produto 6",
     "status": "false",
     "imagem": "../assets/img/placa-video.jpg",
@@ -50,7 +50,7 @@
     "preco": 30.0
   },
   {
-    "id": 3,
+    "id": 7,
     "descricao": "Produto 7",
     "status": "true",
     "imagem": "../assets/img/palaca-mae.jpg",
@@ -58,7 +58,7 @@
     "preco": 30.0
   },
   {
-    "id": 3,
+    "id": 8,
     "descricao": "Produto 8",
     "status": "true",
     "imagem": "../assets/img/processador.webp",
@@ -66,7 +66,7 @@
     "preco": 30.0
   },
   {
-    "id": 3,
+    "id": 9,
     "descricao": "Produto 9",
     "status": "false",
     "imagem": "../assets/img/garrafa-termica.jpg",
