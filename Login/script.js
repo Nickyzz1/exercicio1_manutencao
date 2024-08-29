@@ -30,3 +30,21 @@ function renderThats(el) {
     el.style.display = "block";
   }
 }
+
+// exibição de senha
+
+function togglePassword() {
+  var senhaInput = document.getElementById("senha");
+  var toggleButton = document.getElementById("toggleSenha");
+
+  if (senhaInput.type === "password") {
+    senhaInput.type = "text";
+    toggleButton.textContent = "Ocultar";
+  } else {
+    senhaInput.type = "password";
+    toggleButton.textContent = "Exibir";
+  }
+}
+
+
+
