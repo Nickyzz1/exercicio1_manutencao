@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "click",
     ".btn-adicionar-ao-carrinho",
     function () {
+      alert("Você adicionou um produto no carrinho")
       const indexDoProduto = $(this).data("indice");
       const produtoSelecionado = produtos[indexDoProduto];
       let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
