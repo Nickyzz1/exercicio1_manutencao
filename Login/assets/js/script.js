@@ -42,7 +42,7 @@ function togglePassword() {
     toggleButton.textContent = "Ocultar";
   } else {
     senhaInput.type = "password";
-    toggleButton.textContent = "Exibir";
+    toggleButton.textContent = "Exibir senha";
   }
 }
 

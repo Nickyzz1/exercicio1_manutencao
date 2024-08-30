@@ -4,29 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   </head>
   <body>
 
+    <nav>
+      <ul>
+        <li>
+          <a href="../Showroom/showroom.html">ir para showroom</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-      <h1>Login</h1>
-        <input type="text" placeholder="Insira seu nome" id="nome" />
-        <div >
-          <input type="password" placeholder="Insira sua senha" id="senha" >
-        </div>
-        <button id="toggleSenha" onclick="togglePassword()" >Exibir</button>
-        <button onclick="login()">Entrar</button>
-        <div id="alerta">
-          <div class="content">
-            <p>Login ou senha incorretos!</p>
-            <button onclick="exit()">Fechar</button>
+<main>
+  
+      <div class="container">
+        <h1>Login</h1>
+          <input type="text" placeholder="Insira seu nome" id="nome" />
+          <div >
+            <input type="password" placeholder="Insira sua senha" id="senha" >
+          </div>
+          <button id="toggleSenha" onclick="togglePassword()" >Exibir senha</button>
+          <button onclick="login()">Entrar</button>
           </div>
         </div>
-        <p><a href="../Showroom/showroom.html">Visitar showroom</a></p>
       </div>
-    </div>
-    <script src="script.js"></script>
+  
+      <div class="content" id="alerta" >
+        <p>Login ou senha incorretos!</p>
+        <button onclick="exit()">Fechar</button>
+      </div>
+</main>
+
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

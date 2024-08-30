@@ -1,0 +1,85 @@
+*
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+#pedido {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: green;
+    color: #ffff;
+    font-size: 1.4rem;
+  }
+header{
+    margin-bottom: 10%;
+}
+
+  nav{
+    background-image: linear-gradient(
+        to right,
+        rgb(154, 114, 61),
+        rgb(83, 63, 63)100%,
+        rgb(52, 47, 47) 
+
+    );
+    padding: 2%;
+    color: white;
+    display: flex;
+    justify-content: left;
+    box-shadow: 0 0 9px rgb(226, 170, 97);
+    width: 100%;
+    gap: 2rem;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    color: rgb(218, 204, 193);
+  }
+
+  ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+  }
+
+  .carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 60px; /* Aumenta o padding para melhorar o layout */
+    margin: 10px; /* Ajusta a margem para espaçamento entre os cards */
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgb(226, 170, 97);
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  }
+
+  button {
+    border: none;
+    background-color:  rgb(83, 63, 63);
+    margin: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color:  rgb(154, 114, 61);
+  }
